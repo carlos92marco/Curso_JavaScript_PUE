@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/script.js"></script>
+    </head>
+    <body onload="cargarProvincias()">
+
+        <label for="provincias">Provincia:</label>
+        <select id="provincias" onchange="cargarPoblaciones()">
+            <option>--selecciona--</option>
+        </select><br/>
+
+        <label for="poblaciones">poblacion:</label>
+        <select id="poblaciones">
+            <option>--selecciona--</option>
+        </select>
+
+        <script>
+            for(i=1; i<=10; i++){
+                console.log(i);
+            }
+            for(i=10; i>0; i--){
+                console.log(i);
+            }
+            for(i=1; i<=10; i+=2){
+                console.log(i);
+            }
+            
+        </script>
+        
+    </body>
+</html>

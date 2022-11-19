@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //Generar un numero aleatorio entre 1 y 10
+
+            let aleatorio = parseInt(Math.random()*10)+1;
+            let acertado = false;
+
+            while(!acertado){
+                let numero = parseInt(prompt("Adivina numero del 1 al 10"));
+                if(numero > aleatorio){
+                    alert("Te has pasado, prueba un numero menor");
+                }else if (numero < aleatorio){
+                    alert("Te has quedado corto, prueba con un numero mayor");
+                }else if(numero == aleatorio){
+                    alert("Has acertado");
+                    acertado = true;
+                }
+            }
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #cuadrado{
+                width: 200px;
+                height: 150px;
+                background-color: blanchedalmond;
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aplicar estilos con JS</h1>
+
+        <div id="cuadrado"></div>
+        <button onclick="borde()">Aplicar borde</button>
+        <button onclick="color()">aplicar color</button>
+        <button onclick="sombra()">aplicar sompra</button>
+
+        <script>
+            let estiloBorde = false;
+            let estiloColor = false;
+            let estiloSombra = false;
+
+            function borde(){
+                //si no tiene borde lo ponemos, y sino lo quitamos
+
+                if(estiloBorde == false){
+                    document.getElementById("cuadrado").style.border="5px solid blue";
+                    estiloBorde = true;
+                }else{
+                    document.getElementById("cuadrado").style.border="none";
+                    estiloBorde = false;
+                }
+            }
+            function color(){
+                //si no tiene color lo ponemos, y sino lo quitamos
+
+                if(estiloColor == false){
+                    document.getElementById("cuadrado").style.backgroundColor="red";
+                    estiloColor = true;
+                }else{
+                    document.getElementById("cuadrado").style.backgroundColor="blanchedalmond";
+                    estiloColor = false;
+                }
+            }
+
+            function sombra(){
+                //si no tiene borde lo ponemos, y sino lo quitamos
+
+                if(estiloSombra == false){
+                    document.getElementById("cuadrado").style.boxShadow="5px 5px 10px grey";
+                    estiloSombra = true;
+                }else{
+                    document.getElementById("cuadrado").style.boxShadow="none";
+                    estiloSombra = false;
+                }
+            }
+        </script>
+        
+    </body>
+</html>

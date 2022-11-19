@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+                
+        <script>
+            let frutas = ["pera", "melocoton", "fresa", "naranja", "manzana"];
+
+            //map -> por cada elemento de la coleccion me devuelve otro modificado
+            //coleccion.map(que_recibo =>{como lo proceso})
+
+            let mayusculas = frutas.map(item => item.toUpperCase());
+            console.log(mayusculas);
+            console.log(frutas);
+
+            //filter -> a cada elemento le aplicamos una condicion
+            // si es true nos lo quedamos, si es false lo descartamos
+            //coleccion.filter(que_recibo=>{condicion})
+
+            let comienzanM = frutas.filter(item => item.charAt(0) == 'm');
+            console.log(comienzanM);
+
+            //reduce -> acumula los elementos y devuelve un unico resultado
+            //coleccion.reduce((acumulador, que_recibo)=> como lo proceso)
+            let cadena = frutas.reduce((acum, fruta)=>acum + "-" + fruta);
+            console.log(cadena);
+
+            var suma = [1,5,2,7,3].reduce((acum, num)=> acum + "-"+ num);
+            console.log(suma);
+        </script>
+
+    </body>
+</html>

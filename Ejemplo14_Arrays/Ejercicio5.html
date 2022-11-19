@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            var numeros = new Array(1,2,7,3,4,65,23,78,98,34,342,45,57);
+
+            let pares = 0;
+            let impares = 0;
+
+            for(let i = 0; i<numeros.length; i++){
+                if(numeros[i] %2 == 0) pares += numeros[i];
+                else impares += numeros[i];
+            }
+            console.log("El total de los numeros pares es: " + pares);
+            console.log("El total de los numeros impares es: " + impares);
+        </script>
+        
+    </body>
+</html>

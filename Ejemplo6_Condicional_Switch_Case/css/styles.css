@@ -1,0 +1,20 @@
+.rojo{
+    background-color: red;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.verde{
+    background-color: green;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.azul{
+    background-color: blue;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}

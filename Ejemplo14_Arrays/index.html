@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            //------------------------Arrays de una dimension---------------------------
+            //Crear un array
+            let numeros = new Array(1,3,5,6,7,8);
+            let numeros2 = [1,3,5,6,7,8];
+
+            //Acceder a un elememnto de array array[indice]. El indice empieza por 0
+            console.log(numeros[0]);
+            console.log(numeros2[4]);
+
+            // ptopiedad length, devuelve la longitud del array
+            console.log(numeros.length);
+
+            document.write("Array: " + numeros + "<br/>");
+            document.write("Array invertido: " + numeros.reverse() + "<br/>");
+            document.write("Array ordenado: " + numeros.sort() + "<br/>");
+            document.write("Array ordenado descendente: " + numeros.reverse().sort() + "<br/>");
+            document.write("Array join: " + numeros.join("/") + "<br/>");
+            document.write("Elementos 2 al 4: " + numeros.slice(2,4) + "<br/>");
+            document.write("Elementos 2 al final " + numeros.slice(2) + "<br/>"); 
+
+            let letras = ['a', 'e', 'i', 'o', 'u']
+
+            document.write("Letras y numeros " + letras.concat(numeros)+ "<br/>"); 
+            document.write("Numeros y letras " + numeros.concat(letras) + "<br/>"); 
+
+            //------------------------Matrices de 2 dimensiones---------------------------
+
+            //Crear la matriz
+            var matriz = new Array(3); //3 filas 2 columnas
+            matriz[0] = new Array(2);
+            matriz[1] = new Array(2);
+            matriz[2] = new Array(2);
+            matriz[0][0] = 9;
+            matriz[0][1] = 5;
+            matriz[1][0] = 3;
+            matriz[1][1] = 6;
+            matriz[2][0] = 4;
+            matriz[2][1] = 1;
+
+            //todo en uno
+            let matriz2 = [[9,5], [3,6], [4,1]];
+            
+            let matriz3 = new Array(new Array(9,5), new Array(1,2), new Array(4,9));
+
+            
+            //Recorrer array bidimensional con for tradicional
+            for(let i=0; i<matriz.length; i++){
+                for(let z=0; z<matriz[i].length; z++){
+                    document.write(matriz[i][z] + " ");
+                }
+                document.write("<br/>");
+            }
+
+            //con for - in
+            for(let fila in matriz){
+                for(let columna in matriz[fila]){
+                    document.write(matriz[fila][columna] + " ");
+                }
+                document.write("<br/>");
+            }
+
+            //con for - of
+
+            for(let fila of matriz){
+                for(let item of fila){
+                    document.write(item + " ")
+                }
+                document.write("<br/>")
+            }
+
+
+        
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #productos, th, td{
+                border: thin solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="productos">
+            <tr>
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+            </tr>
+        </table>
+
+        <script>
+            var tabla = document.getElementById("productos");
+            for(let i = 1; i<=5; i++){
+                let fila = document.createElement("tr");
+                let id = document.createElement("td")
+                id.innerText = i;
+                let descripcion = document.createElement("td");
+                descripcion.innerText = "Producto "+i;
+                let precio = document.createElement("td");
+                precio.innerText = i*100;
+
+                fila.appendChild(id);
+                fila.appendChild(descripcion);
+                fila.appendChild(precio);
+                
+
+                tabla.appendChild(fila);
+            }
+        </script>
+    </body>
+</html>
