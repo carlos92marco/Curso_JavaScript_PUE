@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .contenedor{
+                
+                display: flex;
+                gap: 20px;
+                text-align: center;
+                margin: 20px;;
+            }
+            .contenedor2{
+                width: 300px;
+                height: 200px;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div draggable="true" ondragstart="start()" ondragend="end()" id="madrid">Madrid</div>
+            <div draggable="true" ondragstart="start()" ondragend="end()" id="paris">Paris</div>
+            <div draggable="true" ondragstart="start()" ondragend="end()" id="lisboa">Lisboa</div>
+        </div>
+        <div class="contenedor">
+            <div class="contenedor2" id="francia" ondragover="over()" ondragleave="leave()" ondrop="drop()">Francia</div>
+            <div class="contenedor2" id="españa" ondragover="over()" ondragleave="leave()" ondrop="drop()">España</div>
+            <div class="contenedor2"  id="portugal" ondragover="over()" ondragleave="leave()" ondrop="drop()">Portugal</div>
+        </div>
+
+
+        <script>
+            let ciudad;
+            let pais;
+            function start(){
+                event.target.style.opacity = "0.3";
+                ciudad = event.target.id;
+            }
+            function end(){
+                event.target.style.opacity = "1";
+            }
+            function over(){
+                if((ciudad == "paris" && pais == "francia") ||
+                (ciudad == "madrid" && pais == "españa") ||
+                (ciudad == "lisboa" && pais == "portugal")){
+                    event.target.style.border = "3px solid green";
+                }else{
+                    event.target.style.border = "thin solid red";
+                }
+                event.preventDefault();
+                pais = event.target.id;
+            }
+            function leave(){
+                event.target.style.border = "none";
+            }
+            function drop(){
+                if((ciudad == "paris" && pais == "francia") ||
+                (ciudad == "madrid" && pais == "españa") ||
+                (ciudad == "lisboa" && pais == "portugal")){
+                event.target.appendChild(document.getElementById(ciudad));
+                
+               }
+               event.target.style.border = "none";
+               
+            }
+        </script>
+        
+    </body>
+</html>
