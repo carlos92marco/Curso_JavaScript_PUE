@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arrayTelefonos =["+56-2-24215300", "+56 2 24215300", "+56-2 24215300", "+56 2-24215300", "+56-2-2421530", "+56-2-242153000", "+34-2-24215300", "+56-2-24215A00"];
+
+            let exp = /^\+56(\-2\-| 2 )\d{8}$/;
+                    // caracter de escape +56, caracter de escape 2 caracter de escape o espacio 2 espacio y 8 numeros decimales
+            
+
+            for(array of arrayTelefonos){
+                if(exp.test(array)){
+                console.log(array + " Es valido");
+                }else{
+                console.log(array + " No es valido");
+                }
+            }
+        </script>
+        
+    </body>
+</html>

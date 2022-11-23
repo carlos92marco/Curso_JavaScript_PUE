@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="nombreTxt">Nombre del pokemon:</label>
+        <input type="text" name="nombre" id="nombreTxt" onblur="buscar()">
+
+        <div id="resultado"></div>
+        
+        <script>
+            var xhr;
+
+            function buscar(){
+                //Obtener el objeto HMLHttpRequest
+                xhr = new XMLHttpRequest();
+
+                //Recuperar el nombre del pokemon a buscar
+
+                let dato = nombreTxt.value;
+
+                //Preparar la petición
+
+                xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/"+dato, true);
+
+                //En la cabecera indico que el formato de respuesta e JSON
+
+                xhr.setRequestHeader("accept", "application/json");
+
+                //Informar de la funcion que va a procesar la respuesta
+                xhr.onreadystatechange = procesar;
+
+                //Enviar la peticion
+
+                xhr.send();
+            }
+
+            function procesar(){
+                //Solo se procesa si hemos recibido la respuesta al completo
+                if(xhr.readyState == 4){
+                    var datos = JSON.parse(xhr.responseText);
+                    console.log(datos);
+
+                    var seccion = document.getElementById("resultado");
+
+                    seccion.innerText = "Altura: " + datos.height + "\n";
+                    seccion.innerText += "Peso: " + datos.weight + "\n";
+                    seccion.innerText += "Orden: " + datos.order + "\n";
+
+                    for(var habilidad of datos.abilities){
+                        seccion.innerText += "Habilidad: " + habilidad.ability.name + "\n";
+                    }
+                }
+
+            }
+        </script>
+    </body>
+</html>

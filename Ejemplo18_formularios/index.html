@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/codigo.js"></script>
+    </head>
+    <body onload="completar()">
+        <form id="formulario" action="" method="get">
+            <fieldset  style="gap: 10px">
+                <legend>Datos personales</legend>
+                <label for="nombreTxt">Nombre:</label>
+                <input id="nombreTxt" name="nombre" type="text" >
+            <br/>
+                <label for="apellidoTxt">Apellido:</label>
+                <input id="apellidoTxt" name="apellido" type="text" list="apellidosList">
+                <datalist id="apellidosList">
+                    <option value="Lopez">Lopez</option>
+                    <option value="Lara">Lara</option>
+                    <option value="Laiz">Laiz</option>
+                    <option value="Sanz">Sanz</option>
+                    <option value="Sanchez">Sanchez</option>
+                    <option value="Sevilla">Sevilla</option>
+                </datalist> <br/>
+                <label for="edadTxt">Edad:</label>
+                <input id="edadTxt" name="edad" type="number" min="0" max="110"> <br/>
+                <label for="emailTxt">Email:</label>
+                <input id="emailTxt" name="email" type="email"> <br/>
+                <label for="urlTxt">Sitio web:</label>
+                <input type="url" name="url" id="urlTxt"> <br/>
+                <label for="fechaTxt">Fecha de nacimiento:</label>
+                <input type="date" name="fecha" id="fechaTxt"> <br>
+                <label for="sexoTxt">Sexo:</label>
+                <input type="radio" name="sexo" id="sexoTxt" value="hombre"><label>Hombre</label>
+                <input type="radio" name="sexo" id="sexoTxt" value="mujer"><label>Mujer</label>
+            </fieldset>
+            <fieldset>
+                <legend>Datos academicos</legend>
+                <label for="estudiosTxt">Nivel de estudios</label>
+                <select name="estudios" id="estudiosTxt">
+                    <option value="nada">Sin estudios</option>
+                    <option value="eso">ESO</option>
+                    <option value="medio">Grado Medio</option>
+                    <option value="superior">Grado Superior</option>
+                </select> <br/>
+                <label for="cursosTxt">Cursos</label>
+                <select name="cursos" id="cursosTxt" multiple="multiple">
+                    <option value="ofi">Ofimatica</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="angular">Angular</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Enviar" onclick="mostrar()">
+            <input type="reset" value="Reset">
+
+
+        </form>
+    </body>
+</html>
