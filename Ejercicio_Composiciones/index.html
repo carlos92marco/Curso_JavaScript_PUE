@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/Direccion.js"></script>
+        <script src="js/Persona.js"></script>
+    </head>
+    <body>
+
+        <script>
+            
+            var dir1 = new Direccion("falsa", 1 , "Madrid");
+            var maria = new Persona("maria", 20, dir1);
+
+            document.write(maria.mostrarInfo()+"<br/>");
+            document.write(maria.getDireccion().getPoblacion());
+            </script>
+        
+    </body>
+</html>

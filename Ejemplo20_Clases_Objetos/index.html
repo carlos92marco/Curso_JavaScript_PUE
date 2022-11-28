@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="Alumno.js"></script>
+        <script src="Producto.js"></script>
+    </head>
+    <body>
+        <script>
+            var alumno1 = new Alumno();
+            alumno1.nombre = "juan";
+            alumno1.apellido = "Lopez";
+            alumno1.nota = 7.5;
+
+            //console.log(alumno1.mostrarInformacion());
+
+            document.write(alumno1.mostrarInformacion() + "<br/>");
+
+            alumno2 = new Alumno("Carlos", "Marco", 9.9);
+            document.write(alumno2.mostrarInformacion() + "<br/>");
+
+            producto1 = new Producto(10, "papel pal culo", 5.99);
+            document.write(producto1.mostrarInformacion() +"<br/>");
+            producto2 = new Producto(11, "papel pa fumar", 0.99);
+            document.write(producto2.mostrarInformacion() +"<br/>");
+            producto3 = new Producto(12, "papel pal cagar", 3.99);
+            document.write(producto3.mostrarInformacion() +"<br/>");
+            producto3.precio = 10;
+            document.write(producto3.mostrarInformacion() +"<br/>");
+            
+        </script>
+        
+    </body>
+</html>
